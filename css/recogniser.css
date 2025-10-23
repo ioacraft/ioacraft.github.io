@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz@8..60&display=swap');
+
+@property --gradientIntense {
+    syntax: "<color>";
+    initial-value: #284c99;
+    inherits: false;
+}
+
+@property --gradientFade {
+    syntax: "<color>";
+    initial-value: rgb(167, 201, 245);
+    inherits: false;
+}
+
+#page {
+    position: absolute;
+
+    padding: 0;
+    margin: 0;
+
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+
+    background: radial-gradient(var(--gradientFade), var(--gradientIntense));
+    transition: --gradientFade 0.5s, --gradientIntense 0.5s;
+}
+
+.text {
+    position: absolute;
+
+    top: 35%;
+    left: 25%;
+
+    height: 25%;
+    width: 50%;
+
+    text-align: center;
+    vertical-align: middle;
+
+    font-family: 'Source Serif 4';
+    font-size: 3vi;
+    color: #efefef;
+    text-shadow: 1px 1px 0.5px #000000;
+}
+
+#start {
+    background-color: transparent;
+    background-repeat: no-repeat;
+
+    border: none;
+
+    overflow: hidden;
+    outline: none;
+}
